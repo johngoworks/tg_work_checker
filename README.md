@@ -18,7 +18,13 @@
 - **GENAI_API_KEY** — API ключ для использования генеративного ИИ (получите у поставщика [GEMINI](https://ai.google.dev/gemini-api/docs/api-key)).
 - **BOT_TOKEN** — токен для вашего бота, полученный через [BotFather](https://t.me/BotFather).
 
-## Запуск
+## Перед запуском
+
+Запустите и заполните номер ,код от телеграмма и пароль если есть:
+```
+
+python session_init.py
+```
 
 ### Через Python
 
