@@ -17,7 +17,7 @@ async def main(message_bot: types.Message, sort_filter=None):
 
     with open("result.txt", "w", encoding="utf-8") as f:
         for vacancy in sorted_vacancies:
-            f.write(f"{dict(vacancy)}\n")
+            f.write(f"{pprint.pformat(vacancy)}\n")
             vacatcy_text = f'<b>Вакансия:</b> \n   {vacancy.position }\n<b>Зарплата:</b>\n   {vacancy.salary}\n<b>Краткое описание:</b>\n   {vacancy.short_description}\n\n<b>Требования:</b>\n    {vacancy.requirements}\n<b>Условия:</b>\n    {vacancy.conditions}\n<b>Ссылка:</b>\n   <a href="{vacancy.message_link}">перейти</a>\n\n'
             await message_bot.answer(vacatcy_text, parse_mode="HTML")
 
